@@ -64,5 +64,50 @@
             </Button>
         </Grid>
 
+        <Grid Grid.Row="2" Background="#222222">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Content="100%" Foreground="White" Grid.Column="0" x:Name="Size"/>
+            <Button Background="Transparent" 
+            Height="31" 
+            Grid.Column="1" 
+            BorderThickness="0" Click="ZoomIn">
+                <Button.Content>
+                    <Image Source="Images/zoomin.png"/>
+                </Button.Content>
+            </Button>
+            <Button Background="Transparent" 
+            Height="31" 
+            Grid.Column="2" 
+            BorderThickness="0" Click="ZoomOut">
+                <Button.Content>
+                    <Image Source="Images/zoomout.png"/>
+                </Button.Content>
+            </Button>
+            <Button Background="Transparent" 
+            Height="31" 
+            Grid.Column="3" 
+            BorderThickness="0" x:Name="fitBtn" Click="FitScreen">
+                <Button.Content>
+                    <Image Source="Images/fitscreen.png"/>
+                </Button.Content>
+            </Button>
+            <Button Background="Transparent" 
+            Height="31" 
+            Grid.Column="4" 
+            BorderThickness="0" x:Name="originalBtn" Click="OriginalSize">
+                <Button.Content>
+                    <Image Source="Images/originalsize.png"/>
+                </Button.Content>
+            </Button>
+        </Grid>
+
     </Grid>
 </Window>
