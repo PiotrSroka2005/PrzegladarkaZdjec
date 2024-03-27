@@ -55,5 +55,17 @@ namespace PrzegladarkaZdjec
                 }
             }
         }
+
+        private void DisplayImage(int i)
+        {
+            displayedImageIndex = i;
+            Name.Content = paths[i].Split("\\").Last();
+            displayedImage = new BitmapImage();
+            displayedImage.BeginInit();
+            displayedImage.UriSource = new Uri(paths[i]);
+            displayedImage.Rotation = rotation;
+            displayedImage.EndInit();
+            Image.Source = displayedImage;            
+        }
     }
 }
