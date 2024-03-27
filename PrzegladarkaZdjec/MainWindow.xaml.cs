@@ -67,5 +67,14 @@ namespace PrzegladarkaZdjec
             displayedImage.EndInit();
             Image.Source = displayedImage;            
         }
+
+        private void ShowPrevious(object sender, RoutedEventArgs e)
+        {
+            if (displayedImageIndex > 0)
+            {
+                rotation = 0;
+                DisplayImage(displayedImageIndex - 1);
+            }
+        }
     }
 }
