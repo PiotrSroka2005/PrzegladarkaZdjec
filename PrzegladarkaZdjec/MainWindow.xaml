@@ -14,17 +14,17 @@
         </Grid.RowDefinitions>
         
         <Grid Grid.Row="0">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="auto"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
 
-        <Button Content="Wybierz folder" 
+            <Button Content="Wybierz folder" 
                     HorizontalAlignment="left" 
                     Click="OpenDirectory" 
                     Grid.Column="0" Height="40" Background="#222222" Foreground="White"/>
-        <Button Background="Transparent" 
+            <Button Background="Transparent" 
                     Height="30" 
                     Grid.Column="1" 
                     BorderThickness="0" Click="Rotate">
@@ -34,6 +34,35 @@
         </Button>
 
         <Label FontSize="20" Content="Nazwa pliku" Grid.Column="2" Foreground="White" HorizontalContentAlignment="Right" x:Name="Name"/>
-    </Grid>
+        </Grid>
+
+        <Grid Grid.Row="1" x:Name="ImageGrid">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Background="Transparent" 
+            Height="30" 
+            Grid.Column="0" 
+            BorderThickness="0" Click="ShowPrevious">
+                <Button.Content>
+                    <Image Source="Images/previous.png"/>
+                </Button.Content>
+            </Button>
+
+            <Image x:Name="Image" Grid.Column="1"/>
+
+            <Button Background="Transparent" 
+            Height="30" 
+            Grid.Column="2" 
+            BorderThickness="0" Click="ShowNext">
+                <Button.Content>
+                    <Image Source="Images/next.png"/>
+                </Button.Content>
+            </Button>
+        </Grid>
+
     </Grid>
 </Window>
