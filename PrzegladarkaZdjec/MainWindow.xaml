@@ -79,7 +79,8 @@
             <Button Background="Transparent" 
             Height="31" 
             Grid.Column="1" 
-            BorderThickness="0" >
+            BorderThickness="0"
+            Click="ZoomIn">
                 <Button.Content>
                     <Image Source="Images/zoomin.png"/>
                 </Button.Content>
@@ -87,7 +88,8 @@
             <Button Background="Transparent" 
             Height="31" 
             Grid.Column="2" 
-            BorderThickness="0" >
+            BorderThickness="0" 
+            Click="ZoomOut">
                 <Button.Content>
                     <Image Source="Images/zoomout.png"/>
                 </Button.Content>
