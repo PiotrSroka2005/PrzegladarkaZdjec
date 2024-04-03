@@ -27,7 +27,8 @@
             <Button Background="Transparent" 
                     Height="30" 
                     Grid.Column="1" 
-                    BorderThickness="0" >
+                    BorderThickness="0" 
+                    Click="Rotate">
             <Button.Content>
                 <Image Source="Images/rotate.png"/>
             </Button.Content>
