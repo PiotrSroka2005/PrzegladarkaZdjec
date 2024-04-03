@@ -85,5 +85,13 @@ namespace PrzegladarkaZdjec
                 DisplayImage(displayedImageIndex + 1);
             }
         }
+
+        private void Rotate(object sender, RoutedEventArgs e)
+        {
+            if (paths.Count == 0) return;
+            rotation = (Rotation)((int)(rotation + 1) % 4);
+            DisplayImage(displayedImageIndex);
+        }
+
     }
 }
